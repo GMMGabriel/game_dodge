@@ -6,6 +6,10 @@ var score = 0
 func _ready():
 	randomize()
 
+func _process(delta):
+	if Input.is_action_pressed("ui_select") and $HUD/Button.visible:
+		$HUD._on_Button_pressed()
+
 func newGame():
 	score = 0
 	$HUD.updateScore(score)
