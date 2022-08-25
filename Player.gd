@@ -39,6 +39,7 @@ func _process(delta):
 		$AnimatedSprite.play()
 	else:
 		$AnimatedSprite.stop()
+		$AnimatedSprite.frame = 0
 
 	position += direction * speed * delta
 	position.x = clamp(position.x, playerWidthLimit, screenSize.x - (playerWidthLimit))
